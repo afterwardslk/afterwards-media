@@ -1,0 +1,4 @@
+#!/bin/sh
+# Blocks commits of anything that is not finished post media.
+bad=$(git diff --cached --name-only --diff-filter=A | grep -viE '\.(jpe?g|png|mp4|mp3)$|^README\.md$|^\.gitignore$|^\.githooks/' )
+if [ -n "$bad" ]; then echo "Blocked: only post media (jpg, png, mp4, mp3) can go in this public repo:"; echo "$bad"; exit 1; fi

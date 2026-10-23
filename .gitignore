@@ -1,0 +1,19 @@
+# Allowlist: this repository is PUBLIC. Only finished post media may be committed.
+# Everything is ignored except images, videos, audio and this setup.
+*
+!*/
+!.gitignore
+!README.md
+!.githooks/
+!.githooks/pre-commit
+!*.jpg
+!*.jpeg
+!*.png
+!*.mp4
+!*.mp3
+# Never commit exports or screenshots, even as images
+*admin*
+*supabase*
+*enquir*
+*export*
+*screenshot*
